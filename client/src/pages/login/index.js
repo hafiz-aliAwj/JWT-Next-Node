@@ -43,8 +43,7 @@ function Login() {
           router.push("/");
           const data = await response.json();
           if (data.status === true) {
-            localStorage.setItem("chat-user", JSON.stringify(data.user));
-            // Assuming data.token is valid and contains the token value
+            localStorage.setItem("chat-user", JSON.stringify(data.user))
             sessionStorage.setItem("user", data.token)
           }
         } else {

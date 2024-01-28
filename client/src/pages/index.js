@@ -13,7 +13,7 @@ export default function Chat() {
   useEffect(() => {
     checking();
   }, []);
-  
+
   const checking = async () => {
     if (!localStorage.getItem("chat-user")) {
       router.push("/login");
@@ -21,16 +21,12 @@ export default function Chat() {
       setUser(await JSON.parse(localStorage.getItem("chat-user")));
     }
   };
-  
 
-
-
-  
   return (
     <>
       <div className="bg-[#121246] flex justify-center items-center h-screen w-full ">
         <div className="bg-black rounded-xl w-11/12 h-5/6 flex">
-    <h1 className="text-white">you are auhenticated</h1>
+          <h1 className="text-white">you are auhenticated</h1>
         </div>
       </div>
     </>
